@@ -4,8 +4,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+COPY *config*.json ./
 
-RUN npm install --production --silence
+RUN npm install --silence
 
 COPY . .
 
